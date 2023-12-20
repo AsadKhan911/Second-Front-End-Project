@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINA E-Commerce Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: white;
+            /*width: 100%;*/
+            font-family: DM Sans, Roboto, fallback-font;
+            max-width: 100%;
+            max-height: 100%;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100px;
+            /*border: 2px solid red;*/
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            top: 31px;
+            left: 50px;
+            line-height: 16px;
+        }
+
+        .right {
+            display: block;
+            width: 550px;
+            margin: 0px auto;
+            position: relative;
+            top: 12px;
+            float: right;
+            left: 19px;
+        }
+
+        .aftheader {
+            width: auto;
+            height: 70px;
+            background-color: purple;
+            /* border: 4px solid black;*/
+        }
+
+        h3 {
+            display: block;
+            width: 350px;
+            margin: 0px auto;
+            position: relative;
+            top: 22px;
+            color: white;
+        }
+
+        .container {
+            /*border: 2px solid red;*/
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: url('img.avif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 10px 10px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: rgb(51, 49, 49);
+            font-size: 20px;
+        }
+
+        .navbar li a:hover {
+            text-decoration: underline;
+            color: grey;
+        }
+
+        .imgtext h3 {
+            font-size: 100px;
+            margin: 0px 234px;
+            padding: 0px 0px;
+            display: inline;
+            position: relative;
+            top: 170px;
+            /*border: 2px solid yellow;*/
+        }
+
+        .head2 {
+            margin: 0px 420px;
+            position: relative;
+            top: 150px;
+        }
+
+        .imgtext {
+            display: inline-block;
+        }
+
+        .container button {
+            /*  border: 2px solid green;*/
+            display: block;
+            margin: 20px auto;
+            position: relative;
+            top: 150px;
+            padding: 20px 35px;
+            border-radius: 12px;
+            color: rgb(76, 31, 89);
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            display: block;
+            margin: 0px auto;
+            border: none;
+        }
+
+        .container h1 {
+            display: inline-block;
+            position: relative;
+            top: 155px;
+            left: 418px;
+            color: azure;
+            /*border: 2px solid black;*/
+        }
+
+        .bestseller h3 {
+            /* border: 2px solid black;*/
+            color: black;
+            display: block;
+            width: fit-content;
+            margin: 0px auto;
+            display: inline block;
+            font-size: 50px;
+            position: absolute;
+            top: 700px;
+            left: 500px;
+        }
+
+        .flexitems {
+            /*border: 2px solid black;*/
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 600px;
+        }
+
+        .f1 {
+            /*border: 2px solid orange;*/
+            height: 150px;
+            width: 150px;
+            display: inline-block;
+            margin: 0px 30px;
+            padding: 74px 59px;
+        }
+
+        #f1 {
+            background: url('flex1.avif');
+            background-size: cover;
+        }
+
+        #f2 {
+            background: url('flex2.avif');
+            background-size: cover;
+        }
+
+        #f3 {
+            background: url('flex3.avif');
+            background-size: cover;
+        }
+
+        #f4 {
+            background: url('flex4.avif');
+            background-size: cover;
+        }
+
+        #details1 {
+            position: relative;
+            left: 48px;
+            top: 10px;
+            font-size: 20px;
+            font-family: DM Sans, sans-serif;
+            text-decoration: none;
+        }
+
+        #details2 {
+            position: relative;
+            left: 30%;
+            top: -14px;
+            font-size: 20px;
+            font-family: DM Sans, sans-serif;
+            text-decoration: none;
+        }
+
+        #details3 {
+            position: relative;
+            left: 54%;
+            top: -38px;
+            font-size: 20px;
+            font-family: DM Sans, sans-serif;
+            text-decoration: none;
+        }
+
+        #details4 {
+            text-decoration: none;
+            position: relative;
+            left: 79%;
+            top: -61px;
+            font-size: 20px;
+            font-family: DM Sans, sans-serif;
+        }
+
+        .ImgTextdetails {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .ImgTextdetails :hover {
+            color: rgb(61, 60, 60);
+        }
+
+        .img2 {
+            /* border: 2px solid red;*/
+            background-size: cover;
+            position: relative;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .img2text h1 {
+            color: rgb(255, 255, 255);
+            font-size: 100px;
+            position: absolute;
+            top: 80%;
+            left: 315px;
+        }
+
+        .img2text2 h2 {
+            color: rgb(255, 255, 255);
+            /*border: 2px solid blue;*/
+            display: inline-block;
+            display: block;
+            width: 23%;
+            margin: 0px auto;
+            position: relative;
+            bottom: 385px;
+            left: 45px;
+        }
+
+        .button2 button {
+            /* border: 2px solid green;*/
+            display: block;
+            margin: 20px auto;
+            position: relative;
+            top: -350px;
+            left: 45px;
+            padding: 20px 35px;
+            border-radius: 12px;
+            color: rgb(76, 31, 89);
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            display: block;
+            margin: 0px auto;
+        }
+
+        .flex2 {
+            /*border: 2px solid black;*/
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .f2 {
+            /*border: 2px solid greenyellow;*/
+            display: inline-block;
+            position: relative;
+            width: 540px;
+            height: 400px;
+            margin: 24px 60px;
+        }
+
+        #f21 {
+            background: url('f21.avif');
+            background-size: cover;
+        }
+
+        #f22 {
+            background: url('f22.avif');
+            background-size: cover;
+        }
+
+        #f21h h1 {
+            color: black;
+            position: relative;
+            left: 57px;
+            top: -18px;
+        }
+
+        #f21hh {
+            font-size: 20px;
+            position: relative;
+            left: 52px;
+            top: -45px;
+            color: gray;
+        }
+
+        .f21b button {
+            position: relative;
+            background-color: purple;
+            color: rgb(255, 255, 255);
+
+            top: -37px;
+            left: -40%;
+            width: 180px;
+        }
+
+        .f22h1 h1 {
+            color: black;
+            position: relative;
+            top: -227px;
+            left: 54%;
+        }
+
+        .f22h2 {
+            color: gray;
+            font-size: 20px;
+            position: relative;
+            top: -258px;
+            left: 54%;
+        }
+
+        .f22b button {
+            background-color: purple;
+            color: rgb(255, 255, 255);
+            width: 180px;
+            position: relative;
+            top: -251px;
+            left: 11%;
+        }
+
+        .img3 {
+            position: relative;
+            top: 100px;
+        }
+
+        .img3text h5 {
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            display: block;
+            width: fit-content;
+            margin: 0px auto;
+            position: relative;
+            top: -404px;
+        }
+
+        .img3 h6 {
+            font-size: 23px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            position: relative;
+            top: -424px;
+            left: 40%;
+        }
+
+        .img3 input {
+            width: 360px;
+            padding: 20px 8px;
+            position: relative;
+            top: -377px;
+            left: 428px;
+            border: none;
+        }
+
+        .inputtext::placeholder {
+            color: rgb(179, 172, 172);
+            font-family: DM Sans, Roboto, fallback-font;
+            font-size: medium;
+        }
+
+        .img3 button {
+            font-size: medium;
+            color: rgb(150, 57, 150);
+            background-color: rgb(255, 255, 255);
+            display: block;
+            width: 150px;
+            margin: 0px auto;
+            position: relative;
+            top: -394px;
+            left: 41px;
+            border-radius: 10px;
+        }
+
+        .port4 h3 {
+            color: black;
+            display: block;
+            width: fit-content;
+            margin: 0px auto;
+            font-size: 50px;
+            position: relative;
+            top: -123px;
+        }
+
+        .port4 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .port4 button {
+            background-color: purple;
+            color: rgb(255, 255, 255);
+            width: 200px;
+            font-size: large;
+            position: relative;
+            top: 90px;
+            height: 60px;
+        }
+
+        .flex3 {
+            height: 50%;
+            width: 50%;
+        }
+
+        .f31 {
+            height: 400px;
+            width: 400px;
+
+            display: inline-block;
+            margin: -60px 20px;
+        }
+
+        #f31 {
+            background: url('1.avif');
+            background-size: cover;
+        }
+
+        #f32 {
+            background: url('2.avif');
+            background-size: cover;
+        }
+
+        #f33 {
+            background: url('3.avif');
+            background-size: cover;
+        }
+
+        footer {
+            background-color: rgb(235, 233, 233);
+            height: 50%;
+            width: 100%;
+        }
+
+        .icondiv {
+            margin: 0px 0px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        .icon {
+            font-size: 25px;
+            position: relative;
+            top: 120px;
+            left: 50px;
+            margin: 0px 20px;
+            color: black;
+        }
+
+        footer strong {
+            font-size: 30px;
+            position: relative;
+            top: 95px;
+            left: 68px;
+        }
+
+        .flinks ul {
+            list-style: none;
+            font-size: 21px;
+            position: relative;
+            top: 9px;
+            left: 75%;
+        }
+
+        .flinks ul li {
+            margin: 17px 0px;
+        }
+
+        .flinks a {
+            color: rgb(61, 57, 57);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="img1.avif" alt="">
+        </div>
+        <div class="right">
+            <ul class="navbar">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart (0)</a></li>
+            </ul>
+        </div>
+        <div class="mid"></div>
+    </header>
+    <div class="aftheader">
+        <h3>Free shipping on orders over $50 amount</h3>
+    </div>
+    <div class="container">
+
+        <div class="imgtext">
+            <h3>Handmade ceramics</h3><br>
+        </div>
+        <div class="head1">
+            <h1>Painted clay ceramics made with love.</h1>
+        </div>
+        <div><button>SHOP NOW</button></div>
+        <div class="head2"></div>
+        <div class="bestseller">
+            <h3>Our bestsellers</h3>
+        </div>
+
+
+        <div class="flexitems">
+            <a href="#">
+                <div class="f1" id="f1"></div>
+            </a>
+            <a href="#">
+                <div class="f1" id="f2"></div>
+            </a>
+            <a href="#">
+                <div class="f1" id="f3"></div>
+            </a>
+            <a href="#">
+                <div class="f1" id="f4"></div>
+            </a>
+
+            <div class="ImgTextdetails" id="details1"><a>'Candy' Flowerpot $59.90</a></div>
+            <div class="ImgTextdetails" id="details2"><a>'Drop' Vase $40.90</a></div>
+            <div class="ImgTextdetails" id="details3"><a>'Wave' Vase $69.90</a></div>
+            <div class="ImgTextdetails" id="details4"><a>'Sun' Vase $69.90</a></div>
+
+            <div class="img2"><img src="img2.avif"></div>
+            <div class="img2text">
+                <h1>Home decor items</h1>
+            </div>
+            <div class="img2text2">
+                <h2>Find your new favorite pieces.</h2>
+            </div>
+            <div class="button2"><button>Shop Now</button></div>
+
+            <div class="flex2">
+                <div class="f2" id="f21"><a href="#"></a></div>
+                <div class="f2" id="f22"><a href="#"></a></div>
+                <div id="f21h">
+                    <h1>About Mina</h1> <br>
+                    <h4 id="f21hh">Mina is a brand born out of a passion for ceramics.</h4>
+                </div>
+                <div class="f21b"><button>Learn More</button></div>
+                <div class="f22h1">
+                    <h1>Sustainability</h1><br>
+                    <h4 class="f22h2">Mina is an eco-friendly brand that cares about sustainability.</h4>
+                    <div class="f22b"><button>Learn More</button></div>
+                </div>
+            </div>
+            <div class="img3"><img src="img3.avif" alt="">
+                <div class="img3text">
+                    <h5>Sign-up for our newsletter</h5>
+                </div>
+                <h6>Your email</h6>
+                <input type="text" placeholder="Your email address" class="inputtext">
+                <button>Submit</button>
+            </div>
+
+            <div class="port4">
+                <h3>Follow us on Instagram</h3>
+                <div class="f31" id="f31"></div>
+                <div class="f31" id="f32"></div>
+                <div class="f31" id="f33"></div>
+
+                <a href="https://www.instagram.com/"><button>@mina_studio</button></a>
+            </div>
+
+            <footer>
+                <strong>MINA</strong>
+                <div class="icondiv">
+                    <a href="https://twitter.com/?lang=en" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <div class="flinks">
+                    <ul>
+                        <a href="#">
+                            <li>Contact</li>
+                        </a>
+                        <a href="#">
+                            <li>Returns</li>
+                        </a>
+                        <a href="#">
+                            <li>Payments & Delivery</li>
+                        </a>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
